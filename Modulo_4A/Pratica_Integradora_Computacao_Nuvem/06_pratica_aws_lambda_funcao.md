@@ -42,7 +42,7 @@ Com a conta criada e a sessão iniciada na consola AWS, o próximo passo é nave
 6. Configurar a **role de execução (execution role)** — o Lambda precisa de uma role IAM com permissão para ler mensagens da fila SQS (ex: permissões `sqs:ReceiveMessage`, `sqs:DeleteMessage`, `sqs:GetQueueAttributes`).
 7. Clicar em **"Criar função"** para concluir.
 
-![Criação da função Lambda sqs-queue-process](/imagens/aws_sqs_queue_function/sqs-queue-process-function.png)
+![Criação da função Lambda sqs-queue-process](./imagens/aws_sqs_queue_function/sqs-queue-process.png)
 
 ### O que esta função faz
 
@@ -73,7 +73,7 @@ Para que a função Lambda tenha algo para processar, é necessário criar a fil
 6. Clicar em **"Criar fila"** para concluir.
 7. Voltar à função Lambda `sqs-queue-process` e, na secção **"Triggers"** (gatilhos), adicionar a fila `fila-para-teste-sqs` como origem de eventos — isto liga a fila à função, para que qualquer mensagem depositada nela acione automaticamente a execução do Lambda.
 
-![Criação da fila fila-para-teste-sqs no Amazon SQS](/imagens/aws_sqs_queue_function/fila-para-teste-sqs.png)
+![Criação da fila fila-para-teste-sqs no Amazon SQS](./imagens/aws_sqs_queue_function/fila-para-teste-sqs.png)
 
 ---
 
@@ -90,7 +90,7 @@ Antes de depender de mensagens reais na fila, o Lambda permite simular um evento
 5. Ajustar, se necessário, o conteúdo do campo `body` dentro do JSON de teste, para simular uma mensagem específica.
 6. Guardar o evento de teste clicando em **"Save"** (Guardar).
 
-![Criação do evento de teste sqs-queue-process-test](/imagens/aws_sqs_queue_function/sqs-queue-process-test.png)
+![Criação do evento de teste sqs-queue-process-test](./imagens/aws_sqs_queue_function/sqs-queue-process-test.png)
 
 ---
 
@@ -107,7 +107,7 @@ Com o evento de teste criado, o passo final é executá-lo e verificar se a fun�
    - O **relatório de resumo** (summary), com duração da execução, memória usada e status (sucesso ou erro)
 3. Analisar os logs para confirmar que a mensagem simulada foi corretamente lida e processada pela função.
 
-![Resultados do teste sqs-queue-process-test-results](/imagens/aws_sqs_queue_function/sqs-queue-process-test-results.png)
+![Resultados do teste sqs-queue-process-test-results](./imagens/aws_sqs_queue_function/sqs-queue-process-test-results.png)
 
 ### O que validar no resultado
 - **Status "Succeeded"** — confirma que a função correu sem erros.
