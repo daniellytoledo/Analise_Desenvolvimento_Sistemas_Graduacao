@@ -6,7 +6,7 @@ A **AWS (Amazon Web Services)** é a plataforma de computação em nuvem da Amaz
 
 Na prática, a AWS permite que qualquer pessoa ou empresa, desde um estudante a uma multinacional, alugue capacidade computacional de forma flexível e paga apenas pelo que consome, sem precisar de comprar ou manter servidores físicos.
 
-> Para contexto: a AWS nasceu do excedente de infraestrutura que a própria Amazon tinha construído para aguentar picos de tráfego no seu site de e-commerce (ver ficheiro `computacao-em-nuvem.md` para mais detalhes sobre esse histórico).
+> Para contexto: a AWS nasceu do excedente de infraestrutura que a própria Amazon tinha construído para aguentar picos de tráfego no seu site de e-commerce (ver [00_computacao_em_nuvem.md](./00_computacao_em_nuvem.md) para mais detalhes sobre esse histórico).
 
 ---
 
