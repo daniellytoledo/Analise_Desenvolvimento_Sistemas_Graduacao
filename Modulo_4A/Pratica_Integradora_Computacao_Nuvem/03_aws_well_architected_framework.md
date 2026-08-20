@@ -4,7 +4,7 @@
 
 O **AWS Well-Architected Framework** é um pacote de ferramentas, boas práticas e perguntas-guia desenvolvido pela AWS para ajudar arquitetos e equipas técnicas a **construir a melhor arquitetura de nuvem possível para a sua empresa** — ou seja, sistemas que sejam seguros, eficientes, resilientes e economicamente sustentáveis.
 
-Diferente do AWS CAF (que trata da adoção da nuvem a nível organizacional — negócio, pessoas, governança), o Well-Architected Framework é mais **técnico e de arquitetura**: assume que a empresa já decidiu ir para a nuvem, e foca-se em *como desenhar bem* essa infraestrutura.
+Diferente do [AWS CAF](./02_aws_caf_framework_adocao_nuvem.md) (que trata da adoção da nuvem a nível organizacional — negócio, pessoas, governança), o Well-Architected Framework é mais **técnico e de arquitetura**: assume que a empresa já decidiu ir para a nuvem, e foca-se em *como desenhar bem* essa infraestrutura.
 
 Na prática, funciona como um checklist estruturado em forma de perguntas (ex: "como é que o sistema recupera de falhas?", "os custos estão otimizados?", "os dados estão protegidos?"), que ajuda a identificar riscos e pontos de melhoria numa arquitetura antes — ou depois — de ela ser colocada em produção.
 
@@ -95,7 +95,7 @@ Estes princípios reforçam uma ideia central do framework: a nuvem permite um c
 
 ## Conceitos relacionados para estudar a seguir
 
-- **AWS CAF** (framework complementar, focado na adoção organizacional da nuvem — ver `aws-caf-framework-adocao-nuvem.md`)
+- **AWS CAF** (framework complementar, focado na adoção organizacional da nuvem — ver [02_aws_caf_framework_adocao_nuvem.md](./02_aws_caf_framework_adocao_nuvem.md))
 - **AWS Well-Architected Tool** (ferramenta gratuita na consola AWS para conduzir revisões formais de arquitetura)
 - **Infrastructure as Code** (CloudFormation, Terraform)
 - **Modelo de responsabilidade partilhada**
