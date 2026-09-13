@@ -157,9 +157,79 @@ Quando bem usado, o PaaS pode paradoxalmente resultar em **aplicações mais seg
 
 ---
 
+## 5. Prática — Criação de bucket no Amazon S3 e versionamento de objetos
+
+### Contexto
+Esta prática complementa os conceitos de segurança abordados neste ficheiro — especialmente a proteção de dados contra eliminação acidental ou sobrescrita indevida, que é um dos riscos mais comuns em ambientes de nuvem (ver ponto 1, sobre misconfigurations). O versionamento de objetos no S3 é uma das formas mais simples e eficazes de proteger dados nesse sentido.
+
+### Passo a passo: criar um bucket no Amazon S3
+
+1. Aceder à **AWS Management Console** e navegar até ao serviço **S3**.
+2. Clicar em **"Create bucket"**.
+3. Definir um **nome único globalmente** para o bucket — o nome não pode conter maiúsculas nem espaços, e tem de ser único em toda a AWS (não apenas na conta).
+4. Escolher a **região AWS** onde o bucket vai ser criado — idealmente a mais próxima dos utilizadores ou da aplicação que vai consumir os dados (ver `07_infraestrutura_global_aws.md`, ponto 5, sobre custo por região).
+5. Em **"Object Ownership"**, manter a opção padrão recomendada (**ACLs disabled**) — o acesso é gerido exclusivamente por políticas IAM e de bucket.
+6. Em **"Block Public Access settings"**, manter **todos os bloqueios ativos** (padrão) — esta é uma das configurações de segurança mais importantes, evitando que o bucket fique acidentalmente exposto à internet pública (exatamente o tipo de misconfiguration descrito no ponto 1 deste ficheiro).
+7. Em **"Versioning"**, selecionar **"Enable"** — este é o passo que ativa o versionamento (explicado em detalhe abaixo).
+8. Em **"Default encryption"**, manter a encriptação ativa com a chave gerida pela AWS (SSE-S3) ou escolher SSE-KMS para usar o AWS KMS (ver `13_seguranca_nuvem_aws.md`, ponto 5).
+9. Clicar em **"Create bucket"** para concluir.
+
+![Criação do bucket no Amazon S3](./imagens/aws_bucket/criando_bucket.png)
+
+### Por que o versionamento de objetos é importante
+
+O **versionamento** é um mecanismo que faz o S3 guardar automaticamente **todas as versões de um objeto** sempre que ele é sobrescrito ou eliminado — em vez de apagar a versão anterior, o S3 mantém-na como uma versão histórica, acessível a qualquer momento.
+
+Sem versionamento ativado:
+```
+Upload de ficheiro.pdf (versão 1) → ficheiro.pdf existe no bucket
+Upload de ficheiro.pdf (versão 2) → versão 1 é APAGADA permanentemente
+Eliminação de ficheiro.pdf        → ficheiro DESAPARECE permanentemente
+```
+
+Com versionamento ativado:
+```
+Upload de ficheiro.pdf (versão 1) → Version ID: abc123
+Upload de ficheiro.pdf (versão 2) → Version ID: def456 (versão 1 mantida)
+Eliminação de ficheiro.pdf        → "Delete marker" criado (ficheiro recuperável)
+```
+
+Isto tem implicações diretas de segurança e continuidade:
+
+- **Proteção contra sobrescrita acidental**: se uma aplicação ou utilizador enviar um ficheiro corrompido ou errado, a versão anterior está sempre disponível para restauro.
+- **Proteção contra eliminação acidental**: eliminar um objeto apenas cria um "delete marker" — o objeto pode ser completamente recuperado apagando esse marcador.
+- **Proteção parcial contra ransomware**: um ataque de ransomware que cifre e substitua ficheiros no bucket deixa as versões originais intactas, permitindo recuperação sem pagar o resgate — desde que as permissões IAM estejam corretamente configuradas para impedir a eliminação de versões.
+- **Rastreabilidade e auditoria**: é possível saber exatamente quando cada versão de um ficheiro foi enviada, e por quem (através do CloudTrail, ver `12_monitoramento_servidores_aws.md`).
+
+### Upload de ficheiro e verificação das versões
+
+Com o bucket criado e o versionamento ativo, o upload do mesmo ficheiro mais de uma vez gera versões independentes, visíveis diretamente na consola do S3:
+
+![Upload de arquivo e versões geradas no S3](./imagens/aws_bucket/upload_arquivos_versoes.png)
+
+Para ver as versões de um objeto na consola:
+1. Clicar no bucket e depois no nome do objeto.
+2. Aceder ao separador **"Versions"** — todas as versões são listadas com o seu ID único, data e tamanho.
+3. Qualquer versão anterior pode ser descarregada diretamente ou restaurada como a versão "atual" do objeto.
+
+> **Nota de custo:** cada versão de um objeto ocupa espaço e é cobrada de forma independente. Para buckets com muitos ficheiros e muitas versões, é recomendável configurar uma **política de ciclo de vida** (ver `07_infraestrutura_global_aws.md`, ponto 5) que elimine automaticamente versões antigas após um período definido, evitando acumulação desnecessária de custos.
+
+---
+
+## 6. Material complementar — Relatório: Custo e Segurança em Serviços de Nuvem
+
+Como atividade prática desta aula, foi elaborado um relatório comparando três serviços de armazenamento em nuvem alternativos ao Amazon S3 — o **Azure Blob Storage (Microsoft)**, o **Google Cloud Storage (Google)** e o **Backblaze B2 (Backblaze)** — com análise de preços, recursos de backup e serviços de segurança oferecidos por cada fornecedor.
+
+O relatório está disponível em:
+**[`../atividades_praticas/01_custo_seguranca_nuvens.pdf`](../atividades_praticas/01_custo_seguranca_nuvens.pdf)**
+
+O documento explica como funcionam e se comparam três tipos de serviços de nuvem de armazenamento com backup — **Azure Blob Storage**, **Google Cloud Storage** e **Backblaze B2** —, apresentando o custo de cada um no plano de armazenamento padrão (equivalente ao S3 Standard), os principais recursos de backup e proteção de dados de cada serviço, e os serviços de segurança adicionais disponibilizados por cada fornecedor (como firewalls, gestão de identidade e deteção de ameaças). Ao final, o relatório apresenta e justifica a escolha do serviço mais adequado para um cenário de uso geral.
+
+---
+
 ## Resumo em uma frase
 
-> A segurança em ambientes de nuvem exige uma mudança de mentalidade — do perímetro físico para a identidade e configuração — com desafios distintos em cada modelo: no SaaS o controlo é mínimo e a confiança no fornecedor é central, no IaaS o controlo é máximo mas a responsabilidade operacional também, e no PaaS a infraestrutura é protegida pelo fornecedor mas a segurança da aplicação e das suas dependências continua a ser responsabilidade do developer.
+> A segurança em ambientes de nuvem exige uma mudança de mentalidade — do perímetro físico para a identidade e configuração — com desafios distintos em cada modelo: no SaaS o controlo é mínimo e a confiança no fornecedor é central, no IaaS o controlo é máximo mas a responsabilidade operacional também, e no PaaS a infraestrutura é protegida pelo fornecedor mas a segurança da aplicação e das suas dependências continua a ser responsabilidade do developer; e na prática, ferramentas simples como o versionamento de objetos no S3 já representam uma camada concreta e eficaz de proteção de dados.
 
 ---
 
