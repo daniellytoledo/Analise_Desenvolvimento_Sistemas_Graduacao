@@ -221,7 +221,7 @@ Para ver as versões de um objeto na consola:
 Como atividade prática desta aula, foi elaborado um relatório comparando três serviços de armazenamento em nuvem alternativos ao Amazon S3 — o **Azure Blob Storage (Microsoft)**, o **Google Cloud Storage (Google)** e o **Backblaze B2 (Backblaze)** — com análise de preços, recursos de backup e serviços de segurança oferecidos por cada fornecedor.
 
 O relatório está disponível em:
-**[`../atividades_praticas/01_custo_seguranca_nuvens.pdf`](./atividades_praticas/01_custo_seguranca_nuvens.pdf)**
+**[`./atividades_praticas/01_custo_seguranca_nuvens.pdf`](./atividades_praticas/01_custo_seguranca_nuvens.pdf)**
 
 O documento explica como funcionam e se comparam três tipos de serviços de nuvem de armazenamento com backup — **Azure Blob Storage**, **Google Cloud Storage** e **Backblaze B2** —, apresentando o custo de cada um no plano de armazenamento padrão (equivalente ao S3 Standard), os principais recursos de backup e proteção de dados de cada serviço, e os serviços de segurança adicionais disponibilizados por cada fornecedor (como firewalls, gestão de identidade e deteção de ameaças). Ao final, o relatório apresenta e justifica a escolha do serviço mais adequado para um cenário de uso geral.
 
