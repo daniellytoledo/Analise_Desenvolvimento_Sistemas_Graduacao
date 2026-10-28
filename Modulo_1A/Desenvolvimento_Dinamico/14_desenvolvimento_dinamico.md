@@ -674,56 +674,6 @@ Este exemplo demonstra como os conteúdos estudados ao longo da disciplina podem
 
 ---
 
-## 6. Exercícios para Praticar
-
-### Exercício 1 — Conceitos
-
-Explique a diferença entre uma página estática e uma página dinâmica.
-
-Apresente um exemplo de cada.
-
-### Exercício 2 — Bibliotecas e Frameworks
-
-Pesquise as principais características de:
-
-- React.
-- Angular.
-- Vue.js.
-
-Identifique uma vantagem e uma limitação de cada tecnologia.
-
-### Exercício 3 — Frontend e Backend
-
-Explique a função de:
-
-- HTML.
-- CSS.
-- JavaScript.
-- Node.js.
-- APIs.
-- Bases de dados.
-
-### Exercício 4 — Aplicação dinâmica
-
-Crie uma página HTML com um botão.
-
-Utilize JavaScript para alterar o conteúdo de um parágrafo quando o botão for clicado.
-
-### Exercício 5 — Consumo de API
-
-Utilize a JSONPlaceholder para consultar uma lista de utilizadores e apresentar os nomes no HTML.
-
-### Exercício 6 — Tendências do mercado
-
-Escolha uma tecnologia do ecossistema JavaScript e descreva:
-
-1. A sua finalidade.
-2. Onde é utilizada.
-3. As vantagens.
-4. As principais competências necessárias para a aprender.
-
----
-
 ## Resumo em uma frase
 
 > O desenvolvimento dinâmico consiste na criação de aplicações web capazes de atualizar conteúdos e responder às interações dos utilizadores através da combinação de HTML, CSS, JavaScript, DOM, eventos e APIs, podendo utilizar bibliotecas e frameworks como React, Angular, Vue.js, Next.js, Express e NestJS para organizar soluções mais complexas, enquanto tendências como TypeScript, arquiteturas Full Stack, inteligência artificial, testes automatizados, acessibilidade e desempenho influenciam a evolução das práticas de desenvolvimento web.

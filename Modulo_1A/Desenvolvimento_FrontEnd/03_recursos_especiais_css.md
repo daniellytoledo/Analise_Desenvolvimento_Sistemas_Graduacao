@@ -988,58 +988,6 @@ Utilizar cores, tempos de animação e efeitos de forma coerente em toda a aplic
 
 ---
 
-## 7. Exercícios para Praticar
-
-### Exercício 1 — Box Sizing
-
-Crie duas caixas com:
-
-- Largura de 200px.
-- Padding de 20px.
-- Borda de 5px.
-
-Aplique `content-box` numa caixa e `border-box` na outra.
-
-Compare as dimensões finais.
-
-### Exercício 2 — Linear Gradient
-
-Crie uma página com um fundo que utilize `linear-gradient()`.
-
-Experimente diferentes direções e cores.
-
-### Exercício 3 — Radial Gradient
-
-Crie uma caixa com um gradiente radial utilizando três cores.
-
-### Exercício 4 — Animação de Movimento
-
-Crie uma caixa que se desloque horizontalmente utilizando `@keyframes`.
-
-A animação deve durar dois segundos e repetir-se continuamente.
-
-### Exercício 5 — Animação de Entrada
-
-Crie um cartão que apareça gradualmente utilizando `opacity` e `translateY()`.
-
-### Exercício 6 — Transição de Botão
-
-Crie um botão que altere a cor de fundo e aumente ligeiramente quando o ponteiro passar sobre ele.
-
-Utilize `transition` e `transform`.
-
-### Exercício 7 — Projeto Integrado
-
-Crie uma página contendo:
-
-1. Fundo com gradiente.
-2. Cartão centralizado.
-3. Animação de entrada.
-4. Botão com transição.
-5. Estilos adaptados a `prefers-reduced-motion`.
-
----
-
 ## Resumo em uma frase
 
 > Os recursos especiais do CSS permitem criar interfaces visualmente mais elaboradas através de `box-sizing`, que controla o dimensionamento das caixas, gradientes, que produzem transições graduais entre cores, animações com `@keyframes`, que modificam propriedades ao longo do tempo, e transições, que suavizam mudanças de estilo, contribuindo para a construção de páginas modernas, interativas e responsivas.

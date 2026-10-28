@@ -630,54 +630,6 @@ Entretanto, `.then()` continua a ser válido e importante para compreender o fun
 
 ---
 
-## 6. Exercícios para Praticar
-
-### Exercício 1 — Criar uma Promise
-
-Crie uma Promise que devolva a mensagem:
-
-`"Operação concluída com sucesso!"`
-
-Utilize `.then()` para apresentar o resultado.
-
-### Exercício 2 — Tratar uma rejeição
-
-Crie uma Promise que seja rejeitada com:
-
-`"Falha ao carregar os dados."`
-
-Utilize `.catch()` para apresentar a mensagem.
-
-### Exercício 3 — Simular uma operação assíncrona
-
-Crie uma função que utilize `setTimeout()` e devolva uma Promise resolvida após 2 segundos.
-
-### Exercício 4 — Encadeamento
-
-Crie uma Promise que devolva o número `5`.
-
-Utilize três `.then()` para:
-
-1. Multiplicar por 2.
-2. Somar 10.
-3. Apresentar o resultado final.
-
-**Resultado esperado:** `20`.
-
-### Exercício 5 — Promise.all()
-
-Crie três Promises que devolvam nomes de linguagens de programação.
-
-Utilize `Promise.all()` para obter todos os resultados num array.
-
-### Exercício 6 — Async/Await
-
-Reescreva o exercício 3 utilizando uma função `async` e `await`.
-
-Utilize `try...catch` para tratar possíveis exceções.
-
----
-
 ## Resumo em uma frase
 
 > As Promises em JavaScript representam resultados futuros de operações assíncronas e possuem os estados `pending`, `fulfilled` e `rejected`, permitindo processar resultados com `.then()`, tratar falhas com `.catch()`, executar ações finais com `.finally()` e encadear operações dependentes, além de utilizar recursos como `Promise.all()` e `async/await` para organizar a comunicação com APIs, operações de rede e outras atividades assíncronas de forma mais clara e controlada.

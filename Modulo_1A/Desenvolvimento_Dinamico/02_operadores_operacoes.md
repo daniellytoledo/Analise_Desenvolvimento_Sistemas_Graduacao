@@ -882,59 +882,6 @@ Neste exemplo, utilizámos:
 
 ---
 
-## 6. Exercícios para Praticar
-
-### Exercício 1 — Operações matemáticas
-
-Crie duas variáveis e apresente no console:
-
-- Soma.
-- Subtração.
-- Multiplicação.
-- Divisão.
-- Resto da divisão.
-
-### Exercício 2 — Número par ou ímpar
-
-Crie uma função que receba um número inteiro e devolva:
-
-- `"Par"` se o número for par.
-- `"Ímpar"` se o número for ímpar.
-
-**Dica:** utilize `%` e `===`.
-
-### Exercício 3 — Validação de acesso
-
-Crie uma função que receba:
-
-- Idade.
-- Informação se possui autorização.
-
-O acesso deve ser permitido quando a pessoa possuir 18 anos ou mais **OU** tiver autorização.
-
-### Exercício 4 — Atualização de saldo
-
-Declare uma variável `saldo` com o valor `500`.
-
-Utilize operadores de atribuição para:
-
-1. Adicionar `200`.
-2. Subtrair `150`.
-3. Apresentar o saldo final.
-
-**Resultado esperado:** `550`.
-
-### Exercício 5 — Sistema de aprovação
-
-Crie uma função que receba duas notas e calcule a média.
-
-Utilize um operador ternário para devolver:
-
-- `"Aprovado"` se a média for maior ou igual a 7.
-- `"Reprovado"` caso contrário.
-
----
-
 ## Resumo em uma frase
 
 > Os operadores em JavaScript permitem realizar cálculos, comparar valores, combinar condições e atualizar variáveis, incluindo operadores aritméticos (`+`, `-`, `*`, `/`, `%`, `**`), lógicos (`&&`, `||`, `!`), de atribuição (`=`, `+=`, `-=`), comparação (`===`, `!==`, `>`, `<`) e condicionais (`? :`), sendo essencial compreender as tabelas verdade, os tipos de dados e a precedência das operações para desenvolver expressões corretas e evitar comportamentos inesperados.

@@ -952,53 +952,6 @@ Sempre que possível, utilizar elementos HTML nativos que suportem interação p
 
 ---
 
-## 8. Exercícios para Praticar
-
-### Exercício 1 — Evento de clique
-
-Crie um botão que apresente uma mensagem quando for clicado.
-
-Utilize `addEventListener()`.
-
-### Exercício 2 — Evento de mouse
-
-Crie uma caixa que altere a cor de fundo quando o ponteiro entrar na sua área e volte à cor original quando sair.
-
-### Exercício 3 — Evento de teclado
-
-Crie um campo de texto que apresente no console a tecla pressionada utilizando `keydown`.
-
-### Exercício 4 — Contador
-
-Crie dois botões:
-
-- Um para aumentar um contador.
-- Outro para diminuir o contador.
-
-Apresente o valor atualizado no HTML.
-
-### Exercício 5 — Contador de caracteres
-
-Crie um campo de texto que apresente a quantidade de caracteres digitados em tempo real.
-
-Utilize o evento `input`.
-
-### Exercício 6 — Validação de formulário
-
-Crie um formulário com nome e e-mail.
-
-Utilize o evento `submit` para verificar se os campos foram preenchidos.
-
-Apresente uma mensagem de sucesso ou de erro.
-
-### Exercício 7 — Delegação de eventos
-
-Crie uma lista de elementos `<li>` contendo botões.
-
-Registe um único listener no elemento `<ul>` para identificar qual botão foi clicado.
-
----
-
 ## Resumo em uma frase
 
 > Os eventos em JavaScript permitem criar páginas web interativas através da identificação de ações realizadas pelos utilizadores ou pelo navegador, incluindo eventos de mouse, teclado, botões, formulários e carregamento da página, utilizando `addEventListener()` para executar funções em resposta a essas ocorrências, enquanto recursos como o objeto `event`, `preventDefault()`, propagação de eventos e delegação permitem controlar de forma mais organizada o comportamento dos elementos do DOM.

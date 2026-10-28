@@ -1003,58 +1003,6 @@ Para listas, utilizar `<ul>`, `<ol>` e `<li>`.
 
 ---
 
-## 7. Exercícios para Praticar
-
-### Exercício 1 — Selecionar elementos
-
-Crie uma página HTML contendo:
-
-- Um título com ID.
-- Dois parágrafos com a mesma classe.
-- Uma lista com três elementos.
-
-Utilize JavaScript para selecionar e apresentar esses elementos na consola.
-
-### Exercício 2 — Alterar conteúdo
-
-Crie um botão que, quando clicado, altere o texto de um parágrafo utilizando `textContent`.
-
-### Exercício 3 — Alterar estilos
-
-Crie um botão que adicione ou remova uma classe CSS através de `classList.toggle()`.
-
-### Exercício 4 — Criar elementos
-
-Crie um botão que adicione um novo elemento `<li>` a uma lista sempre que for clicado.
-
-### Exercício 5 — Manipular atributos
-
-Crie uma página com uma imagem e um botão.
-
-Quando o botão for clicado, altere o atributo `src` da imagem.
-
-### Exercício 6 — Navegação no DOM
-
-Crie uma estrutura com elementos aninhados.
-
-Utilize:
-
-- `parentElement`.
-- `children`.
-- `firstElementChild`.
-- `nextElementSibling`.
-- `closest()`.
-
-Apresente os resultados na consola.
-
-### Exercício 7 — Remover elementos
-
-Crie uma lista de tarefas em que cada item possua um botão de remoção.
-
-Utilize `remove()` para excluir apenas o item correspondente.
-
----
-
 ## Resumo em uma frase
 
 > O DOM (Document Object Model) representa os documentos HTML como uma estrutura de objetos que pode ser manipulada por JavaScript, permitindo selecionar elementos através de métodos como `getElementById()` e `querySelector()`, criar novos conteúdos com `createElement()`, modificar textos, estilos e atributos, responder a eventos com `addEventListener()`, navegar entre elementos relacionados e remover componentes dinamicamente, sendo fundamental para desenvolver interfaces web interativas.

@@ -604,53 +604,6 @@ Essa sequência demonstra como a infraestrutura da Internet, os padrões web, os
 
 ---
 
-## 6. Exercícios para Praticar
-
-### Exercício 1 — História da Internet
-
-Explique a diferença entre ARPANET, Internet e World Wide Web.
-
-### Exercício 2 — W3C
-
-Pesquise a finalidade do W3C e explique por que a padronização é importante para o desenvolvimento frontend.
-
-### Exercício 3 — Browser
-
-Escolha dois navegadores e identifique:
-
-- O motor de renderização utilizado.
-- O motor JavaScript.
-- As principais ferramentas de desenvolvimento.
-
-### Exercício 4 — DevTools
-
-Abra uma página no navegador e utilize as ferramentas de desenvolvimento para:
-
-1. Inspecionar um elemento HTML.
-2. Alterar temporariamente uma propriedade CSS.
-3. Executar um comando JavaScript na consola.
-4. Consultar uma requisição no separador Network.
-
-### Exercício 5 — Motores de Pesquisa
-
-Explique as diferenças entre:
-
-- Crawling.
-- Indexação.
-- Ranking.
-
-### Exercício 6 — SEO Básico
-
-Crie uma página HTML contendo:
-
-- Um título descritivo.
-- Uma meta description.
-- Um `<h1>`.
-- Uma imagem com texto alternativo.
-- Uma estrutura semântica com `<header>`, `<main>` e `<footer>`.
-
----
-
 ## Resumo em uma frase
 
 > A Internet é uma infraestrutura mundial de comunicação entre redes que possibilitou o desenvolvimento da World Wide Web, enquanto organizações como o W3C promovem padrões de interoperabilidade e acessibilidade, os browsers permitem consultar e interagir com páginas web através de motores de renderização e execução JavaScript, e os motores de pesquisa ajudam a localizar e organizar informações disponíveis na Web.
